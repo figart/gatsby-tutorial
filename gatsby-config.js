@@ -5,6 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "Mark Figart",
+    description: "An examination of life",
+    author: "@figart",
+    someData: "item1, item2, item3",
+  },
+  plugins: [`gatsby-plugin-styled-components`],
 }
