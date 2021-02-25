@@ -11,5 +11,16 @@ module.exports = {
     author: "@figart",
     someData: "item1, item2, item3",
   },
-  plugins: [`gatsby-plugin-styled-components`],
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `1o788oecdyv3`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `CzZNJsFaFYh31bVSvCxjLoXd6GTxHBTfiHwZI936qbk`,}
+    },
+  ],
 }
