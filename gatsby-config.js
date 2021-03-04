@@ -3,7 +3,9 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
+require('dotenv').config({
+  path:`.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: "Mark Figart",
@@ -18,9 +20,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `1o788oecdyv3`,
+        spaceId: process.env.SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `CzZNJsFaFYh31bVSvCxjLoXd6GTxHBTfiHwZI936qbk`,}
+        accessToken: process.env.ACCESS_TOKEN,}
     },
   ],
 }

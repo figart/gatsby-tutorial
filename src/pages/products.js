@@ -13,16 +13,16 @@ const products = ({ data }) => {
   return (
     <Layout>
       <h1>Products</h1>
-      <section>
-      {products.map((product)=>{
-return <article key={product.slug}>
-  <Image fluid={product.image.fluid} alt={product.name}></Image>
-  <h2>{product.name}</h2>
-  <div>${product.price}</div>
-
-  <Link to={`/products/${product.slug}`}>More Details</Link>
-
-</article>
+      <section className={styles.page}>
+      {products.map((product) => {
+        return (
+          <article key={product.slug}>
+            <Image fluid={product.image.fluid} alt={product.name}></Image>
+            <h2>{product.name}<span>${product.price}</span></h2>
+            
+            <Link to={`/products/${product.slug}`}>More Details</Link>
+          </article>
+        )
       })}
       </section>
       <pre>{JSON.stringify(data, null, 4)}</pre>

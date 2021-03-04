@@ -3,9 +3,30 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 h1 {
   font-family: "Brygada 1918", serif;
   font-weight: 700;
+}
+
+#footer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .single-product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+
+#price {
+  margin-left: 2rem;
+  color: gray;
 }
